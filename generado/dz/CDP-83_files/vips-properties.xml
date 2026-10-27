@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<image xmlns="http://www.vips.ecs.soton.ac.uk//dzsave" date="2026-10-27T11:13:45.147747-05" version="8.15.3">
+  <properties>
+    <property>
+      <name>width</name>
+      <value type="gint">1116</value>
+    </property>
+    <property>
+      <name>height</name>
+      <value type="gint">792</value>
+    </property>
+    <property>
+      <name>bands</name>
+      <value type="gint">4</value>
+    </property>
+    <property>
+      <name>xoffset</name>
+      <value type="gint">0</value>
+    </property>
+    <property>
+      <name>yoffset</name>
+      <value type="gint">0</value>
+    </property>
+    <property>
+      <name>xres</name>
+      <value type="gdouble">2.8340000000000001</value>
+    </property>
+    <property>
+      <name>yres</name>
+      <value type="gdouble">2.8340000000000001</value>
+    </property>
+    <property>
+      <name>vips-loader</name>
+      <value type="VipsRefString">pngload_buffer</value>
+    </property>
+    <property>
+      <name>png-comment-0-Raw</name>
+      <value type="VipsRefString">
+xmp
+     587
+3c3f787061636b657420626567696e3d27efbbbf272069643d2757354d304d7043656869
+487a7265537a4e54637a6b633964273f3e0d0a3c783a786d706d65746120786d6c6e733a
+783d2261646f62653a6e733a6d6574612f223e3c7264663a52444620786d6c6e733a7264
+663d22687474703a2f2f7777772e77332e6f72672f313939392f30322f32322d7264662d
+73796e7461782d6e7323223e3c7264663a4465736372697074696f6e207264663a61626f
+75743d22757569643a66616635626464352d626133642d313164612d616433312d643333
+6437353138326631622220786d6c6e733a657869663d22687474703a2f2f6e732e61646f
+62652e636f6d2f657869662f312e302f223e3c657869663a4461746554696d654f726967
+696e616c3e323032362d30392d32385432323a34313a33332e3037303c2f657869663a44
+61746554696d654f726967696e616c3e3c2f7264663a4465736372697074696f6e3e3c72
+64663a4465736372697074696f6e207264663a61626f75743d22757569643a6661663562
+6464352d626133642d313164612d616433312d6433336437353138326631622220786d6c
+6e733a786d703d22687474703a2f2f6e732e61646f62652e636f6d2f7861702f312e302f
+223e3c786d703a437265617465446174653e323032362d30392d32385432323a34313a33
+332e3037303c2f786d703a437265617465446174653e3c2f7264663a4465736372697074
+696f6e3e3c2f7264663a5244463e3c2f783a786d706d6574613e0d0a3c3f787061636b65
+7420656e643d2777273f3e
+</value>
+    </property>
+    <property>
+      <name>bits-per-sample</name>
+      <value type="gint">8</value>
+    </property>
+    <property>
+      <name>vips-sequential</name>
+      <value type="gint">1</value>
+    </property>
+  </properties>
+</image>

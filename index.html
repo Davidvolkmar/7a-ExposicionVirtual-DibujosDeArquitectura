@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>7.ª Exposición Virtual de Dibujos de Arquitectura</title>
+  <meta name="description" content="7.ª Exposición Virtual de Dibujos de Arquitectura — circuito de salas e invernaderos" />
+  <meta name="theme-color" content="#1d1f23" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Fraunces (títulos: serif "suave" y "torcida"), Bricolage Grotesque (interfaz) y Caveat (notas a mano) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-B7iVzBQ6.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cp703CDm.css">
+</head>
+<body>
+  <canvas id="escena" aria-hidden="true"></canvas>
+
+  <!-- Intro animada (motion graphics, solo CSS: arranca mientras carga el museo).
+       Las herramientas de dibujo trabajan juntas sobre el papel negro: el pincel tiende una franja de oro,
+       el carboncillo sombrea, el compás traza un círculo, el lápiz subraya… y de ahí sale el título. -->
+  <div id="intro" aria-hidden="true">
+    <div class="intro-reticula"></div>
+    <div class="intro-polvo"><i style="--x:45.4%;--y:73.6%;--t:8.7s;--d:1.16s;--s:6px;--o:0.63"></i><i style="--x:20.2%;--y:88.2%;--t:6.9s;--d:1.53s;--s:2px;--o:0.29"></i><i style="--x:31.1%;--y:45.4%;--t:8.2s;--d:1.73s;--s:2px;--o:0.52"></i><i style="--x:40.0%;--y:67.2%;--t:8.0s;--d:1.63s;--s:6px;--o:0.26"></i><i style="--x:52.7%;--y:43.6%;--t:5.8s;--d:0.60s;--s:2px;--o:0.60"></i><i style="--x:33.3%;--y:75.5%;--t:5.8s;--d:0.58s;--s:3px;--o:0.47"></i><i style="--x:65.6%;--y:67.4%;--t:6.1s;--d:2.49s;--s:2px;--o:0.57"></i><i style="--x:32.3%;--y:53.8%;--t:6.2s;--d:0.18s;--s:2px;--o:0.43"></i><i style="--x:83.3%;--y:63.2%;--t:8.8s;--d:2.12s;--s:2px;--o:0.35"></i><i style="--x:91.0%;--y:43.1%;--t:6.5s;--d:1.77s;--s:4px;--o:0.28"></i><i style="--x:62.4%;--y:86.7%;--t:6.1s;--d:0.22s;--s:3px;--o:0.26"></i><i style="--x:41.4%;--y:95.4%;--t:5.5s;--d:1.77s;--s:2px;--o:0.28"></i><i style="--x:78.5%;--y:50.7%;--t:7.2s;--d:1.12s;--s:2px;--o:0.69"></i><i style="--x:75.9%;--y:65.2%;--t:6.5s;--d:0.99s;--s:2px;--o:0.25"></i><i style="--x:85.0%;--y:98.5%;--t:7.4s;--d:2.49s;--s:2px;--o:0.34"></i><i style="--x:39.9%;--y:91.3%;--t:7.6s;--d:0.25s;--s:2px;--o:0.35"></i><i style="--x:26.8%;--y:86.4%;--t:6.3s;--d:0.74s;--s:2px;--o:0.28"></i><i style="--x:22.0%;--y:78.2%;--t:5.1s;--d:0.92s;--s:6px;--o:0.45"></i><i style="--x:94.1%;--y:69.0%;--t:7.3s;--d:2.17s;--s:2px;--o:0.53"></i><i style="--x:31.8%;--y:53.7%;--t:7.4s;--d:1.81s;--s:2px;--o:0.58"></i><i style="--x:92.3%;--y:51.8%;--t:8.8s;--d:2.21s;--s:6px;--o:0.29"></i><i style="--x:6.6%;--y:46.5%;--t:7.0s;--d:0.64s;--s:4px;--o:0.37"></i><i style="--x:81.1%;--y:75.8%;--t:6.2s;--d:0.44s;--s:2px;--o:0.31"></i><i style="--x:48.0%;--y:79.2%;--t:7.5s;--d:0.19s;--s:2px;--o:0.66"></i><i style="--x:21.6%;--y:41.0%;--t:6.1s;--d:1.11s;--s:2px;--o:0.27"></i><i style="--x:29.1%;--y:71.9%;--t:8.9s;--d:0.23s;--s:2px;--o:0.65"></i><i style="--x:96.1%;--y:79.4%;--t:7.8s;--d:1.46s;--s:2px;--o:0.52"></i><i style="--x:90.7%;--y:68.5%;--t:6.4s;--d:0.78s;--s:2px;--o:0.26"></i><i style="--x:63.1%;--y:68.9%;--t:7.9s;--d:0.80s;--s:2px;--o:0.28"></i><i style="--x:54.4%;--y:84.2%;--t:8.6s;--d:1.84s;--s:2px;--o:0.61"></i><i style="--x:89.8%;--y:61.1%;--t:7.7s;--d:2.25s;--s:4px;--o:0.67"></i><i style="--x:4.9%;--y:70.0%;--t:5.1s;--d:1.66s;--s:4px;--o:0.51"></i><i style="--x:60.5%;--y:44.8%;--t:7.6s;--d:2.48s;--s:4px;--o:0.58"></i><i style="--x:39.3%;--y:84.1%;--t:7.3s;--d:1.10s;--s:6px;--o:0.29"></i><i style="--x:74.0%;--y:41.8%;--t:7.4s;--d:1.20s;--s:2px;--o:0.68"></i><i style="--x:12.8%;--y:86.8%;--t:7.6s;--d:1.22s;--s:2px;--o:0.42"></i><i style="--x:15.7%;--y:76.7%;--t:7.1s;--d:1.88s;--s:3px;--o:0.55"></i><i style="--x:44.4%;--y:93.5%;--t:6.3s;--d:1.66s;--s:2px;--o:0.54"></i></div>
+    <div class="intro-logo"><div class="intro-escena">
+      <svg class="intro-lienzo" viewBox="0 0 800 450" fill="none">
+        <!-- líneas guía de construcción (las traza la escuadra) -->
+        <g class="guias">
+          <path pathLength="1" class="trazo g1" d="M-200 276 H1000" /><path pathLength="1" class="trazo g2" d="M-200 196 H1000" />
+          <path pathLength="1" class="trazo g3" d="M110 -60 V520" /><path pathLength="1" class="trazo g4" d="M700 -60 V520" />
+        </g>
+        <!-- cotas del formato de las bases: tabloide 43,2 × 27,9 cm -->
+        <g class="cotas">
+          <path pathLength="1" class="trazo k1" d="M110 58 H700 M110 50 V66 M700 50 V66" />
+          <path pathLength="1" class="trazo k2" d="M742 196 V276 M734 196 H750 M734 276 H750" />
+          <text class="kt kt1" x="405" y="46" text-anchor="middle">43,2 cm</text>
+          <text class="kt kt2" x="762" y="236" text-anchor="middle" transform="rotate(90 762 236)">27,9 cm</text>
+        </g>
+        <!-- salpicaduras de tinta al tocar y al soltar el pincel -->
+        <g class="salpica s1" transform="translate(-16 0)"><circle cx="96" cy="222" r="6" /><circle cx="82" cy="250" r="3.5" /><circle cx="104" cy="262" r="2.5" /><circle cx="74" cy="230" r="2" /></g>
+        <g class="salpica s2" transform="translate(14 0)"><circle cx="716" cy="220" r="5" /><circle cx="732" cy="244" r="3" /><circle cx="724" cy="258" r="2.2" /><circle cx="744" cy="228" r="1.8" /></g>
+        <!-- trazos -->
+        <path pathLength="1" class="trazo franja" d="M92 236 C 230 226, 360 246, 470 234 S 640 230, 712 236" />
+        <path pathLength="1" class="trazo franja cerda" d="M98 204 C 230 194, 360 214, 470 202 S 640 198, 706 205" />
+        <path pathLength="1" class="trazo franja cerda" d="M100 268 C 230 258, 360 278, 470 266 S 640 262, 704 266" />
+        <g class="trazo-carbon">
+          <path pathLength="1" class="trazo c1" d="M292 152 L314 104" /><path pathLength="1" class="trazo c2" d="M304 152 L326 104" />
+          <path pathLength="1" class="trazo c3" d="M316 152 L338 104" /><path pathLength="1" class="trazo c4" d="M328 152 L350 104" />
+          <path pathLength="1" class="trazo c5" d="M472 152 L494 104" /><path pathLength="1" class="trazo c6" d="M484 152 L506 104" />
+        </g>
+        <path pathLength="1" class="trazo circulo" d="M448 128 A48 48 0 1 1 352 128 A48 48 0 1 1 448 128" />
+        <path pathLength="1" class="trazo linea" d="M592 328 L232 328 Q214 328 220 318" />
+
+        <!-- herramientas: cada una con la punta en (0,0) de su grupo -->
+        <g class="herr escuadra"><path d="M0 0 L0 -120 L-120 0 Z M-18 -18 L-18 -62 L-62 -18 Z" fill="rgba(140,200,220,.32)" fill-rule="evenodd" stroke="#bfe3ee" stroke-width="2" /></g>
+        <g class="herr pincel"><g transform="rotate(38)">
+          <path d="M0 0 C -9 -14, -10 -30, -8 -44 L 8 -44 C 10 -30, 9 -14, 0 0 Z" fill="#f2b84b" />
+          <path d="M-8 -44 L 8 -44 L 7 -30 C 4 -26, -4 -26, -7 -30 Z" fill="#3b2d1d" opacity=".55" />
+          <rect x="-8" y="-72" width="16" height="28" rx="2" fill="#c9cdd2" /><rect x="-8" y="-66" width="16" height="3" fill="#8b9096" />
+          <path d="M-6 -72 L-4 -190 Q0 -196 4 -190 L6 -72 Z" fill="#b8322a" /><path d="M-4 -150 L-4 -190 Q0 -196 4 -190 L4 -150 Z" fill="#1d1b19" />
+        </g></g>
+        <g class="herr carboncillo"><g transform="rotate(-24)">
+          <path d="M-7 -2 L5 2 L9 -86 L-6 -90 Z" fill="#2c2a28" stroke="#4a4744" stroke-width="1.5" />
+          <path d="M-7 -2 L5 2 L6 -10 L-6 -12 Z" fill="#6e6a64" />
+        </g></g>
+        <g class="herr compas">
+          <g class="compas-giro">
+            <path d="M24 -118 L0 0" stroke="#d9dde2" stroke-width="5" stroke-linecap="round" />
+            <path d="M24 -118 L48 -6" stroke="#d9dde2" stroke-width="5" stroke-linecap="round" />
+            <path d="M48 -6 L48 0" stroke="#f2b84b" stroke-width="4" stroke-linecap="round" />
+            <circle class="chispa" cx="48" cy="0" r="9" fill="#ffe2a0" />
+            <circle cx="24" cy="-120" r="8" fill="#9aa1a8" /><rect x="21" y="-146" width="6" height="22" rx="3" fill="#4a4f57" />
+          </g>
+        </g>
+        <g class="herr lapiz"><g transform="rotate(-36)">
+          <path d="M0 0 L-8 -22 L8 -22 Z" fill="#e8c9a0" /><path d="M0 0 L-3 -8 L3 -8 Z" fill="#2b2622" />
+          <rect x="-8" y="-150" width="16" height="128" fill="#f2b84b" /><rect x="-3" y="-150" width="5" height="128" fill="#e0a23e" />
+          <rect x="-8" y="-166" width="16" height="16" fill="#c9cdd2" /><rect x="-8" y="-184" width="16" height="18" rx="4" fill="#e9877e" />
+        </g></g>
+      </svg>
+      <div class="intro-textos">
+        <div class="intro-num">7.ª</div>
+        <div class="intro-marca">Exposición <em>Virtual</em></div>
+        <div class="intro-muestra">de Dibujos de Arquitectura</div>
+        <div class="intro-tema">«Habitar: historias de casa»</div>
+      </div>
+      <div class="intro-brillo"></div>
+    </div></div>
+    <svg class="intro-plano" viewBox="-100 -100 200 200" aria-hidden="true">
+      <circle class="pl-anillo" cx="0" cy="0" r="64" pathLength="1" transform="rotate(90)" />
+      <circle class="pl-agua" cx="0" cy="0" r="12" />
+      <line class="pl-puente" style="--d:0.45s" x1="0.0" y1="12.8" x2="0.0" y2="53.8" pathLength="1" />
+      <g transform="translate(0.0 64.0) rotate(180.0)"><rect class="pl-edif" style="--d:0.10s;--c:#d4af37" x="-11" y="-6" width="22" height="12" rx="1.5" /></g>
+      <line class="pl-puente" style="--d:0.57s" x1="-12.2" y1="4.0" x2="-51.1" y2="16.6" pathLength="1" />
+      <g transform="translate(-60.9 19.8) rotate(252.0)"><rect class="pl-edif" style="--d:0.22s;--c:#e0a23e" x="-11" y="-6" width="22" height="12" rx="1.5" /></g>
+      <line class="pl-puente" style="--d:0.69s" x1="-7.5" y1="-10.4" x2="-31.6" y2="-43.5" pathLength="1" />
+      <g transform="translate(-37.6 -51.8) rotate(324.0)"><rect class="pl-edif" style="--d:0.34s;--c:#5cbfa6" x="-11" y="-6" width="22" height="12" rx="1.5" /></g>
+      <line class="pl-puente" style="--d:0.81s" x1="7.5" y1="-10.4" x2="31.6" y2="-43.5" pathLength="1" />
+      <g transform="translate(37.6 -51.8) rotate(396.0)"><rect class="pl-edif" style="--d:0.46s;--c:#5b7fa8" x="-11" y="-6" width="22" height="12" rx="1.5" /></g>
+      <line class="pl-puente" style="--d:0.93s" x1="12.2" y1="4.0" x2="51.1" y2="16.6" pathLength="1" />
+      <g transform="translate(60.9 19.8) rotate(468.0)"><rect class="pl-edif" style="--d:0.58s;--c:#f1e2b8" x="-11" y="-6" width="22" height="12" rx="1.5" /></g>
+      <circle class="pl-pabellon" cx="0" cy="0" r="4.5" />
+    </svg>
+    <div class="intro-destello"></div>
+    <button type="button" class="intro-saltar">Saltar intro</button>
+  </div>
+
+  <!-- Menú previo: portada tipo plataforma, con el museo girando de fondo -->
+  <div id="menu" role="dialog" aria-modal="true" aria-labelledby="menu-titulo">
+    <div class="menu-velo"></div>
+    <div class="menu-cuerpo">
+      <p class="menu-ceja" id="menu-ceja">Exposición virtual · 2026</p>
+      <h1 id="menu-titulo"><span class="num">7.ª</span> Exposición <em>Virtual</em></h1>
+      <p class="menu-muestra">de Dibujos de Arquitectura</p>
+      <p class="menu-tema" id="menu-tema"></p>
+      <p class="menu-meta" id="menu-meta"></p>
+      <p class="menu-texto" id="menu-texto"></p>
+      <div class="menu-botones">
+        <button type="button" class="menu-iniciar" id="menu-iniciar" disabled>
+          <span class="relleno" id="carga-progreso"></span>
+          <span class="etq"><span class="play">▶</span> <span id="menu-iniciar-txt">Preparando el museo…</span></span>
+        </button>
+        <button type="button" class="menu-sec" id="menu-guiado" disabled>Recorrido guiado</button>
+        <button type="button" class="menu-sec" id="menu-info" disabled>ⓘ Información</button>
+      </div>
+      <p class="carga-texto" id="carga-texto" role="status"></p>
+    </div>
+    <div class="menu-fila">
+      <h2>Salas</h2>
+      <div class="menu-tarjetas" id="menu-tarjetas"></div>
+    </div>
+    <footer class="menu-pie">
+      <div class="menu-logos" id="menu-logos"></div>
+      <a href="?vista=galeria" class="menu-galeria">Solo galería (sin 3D)</a>
+      <p class="credito">experiencia virtual hecha por <span>David Volkmar Velez</span></p>
+    </footer>
+  </div>
+
+  <header id="hud" hidden>
+    <div class="marca">
+      <strong><span class="num">7.ª</span> Exposición <em>Virtual</em></strong>
+      <span>de Dibujos de Arquitectura</span>
+    </div>
+    <div id="zona" aria-live="polite"></div>
+    <nav class="acciones" aria-label="Accesos rápidos">
+      <button data-accion="menu" title="Menú (Esc)">☰ Menú</button>
+      <button data-accion="mapa" title="Mapa (M)">Mapa</button>
+      <button data-accion="indice" title="Índice de obras (I)">Índice</button>
+      <button data-accion="guiado" title="Recorrido guiado (G)">Recorrido guiado</button>
+      <button data-accion="aerea" title="Vista aérea (V)">Vista aérea</button>
+      <button data-accion="galeria" title="Solo galería">Solo galería</button>
+      <button data-accion="movimiento" aria-pressed="false" title="Reducir movimiento">Reducir movimiento</button>
+      <button data-accion="silencio" aria-pressed="false" title="Silencio">Silencio</button>
+    </nav>
+  </header>
+
+  <div id="aviso-greybox" hidden></div>
+  <div id="etiqueta" aria-hidden="true"></div>
+  <div id="ayuda" hidden></div>
+
+  <aside id="ficha" hidden aria-live="polite"></aside>
+
+  <section id="panel" class="panel" hidden role="dialog" aria-modal="true">
+    <div class="panel-cabeza"><h2 id="panel-titulo"></h2><button class="cerrar" data-cerrar aria-label="Cerrar">×</button></div>
+    <div id="panel-cuerpo" class="panel-cuerpo"></div>
+  </section>
+
+  <div id="visor" hidden role="dialog" aria-label="Visor de obra">
+    <div id="visor-osd"></div>
+    <div class="visor-barra">
+      <span id="visor-titulo"></span>
+      <button data-visor="menos" aria-label="Alejar">−</button>
+      <button data-visor="mas" aria-label="Acercar">+</button>
+      <button data-visor="ajustar">Ajustar</button>
+      <button data-visor="cerrar">Cerrar (Esc)</button>
+    </div>
+  </div>
+
+  <div id="estuche" hidden></div>
+  <div id="grano" aria-hidden="true"></div>
+  <p id="credito" class="credito" hidden>experiencia virtual hecha por <span>David Volkmar Velez</span></p>
+
+  <div id="joystick" hidden><div id="joystick-pomo"></div></div>
+  <button id="saltar" hidden aria-label="Saltar">Saltar</button>
+
+</body>
+</html>
